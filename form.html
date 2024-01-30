@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Form</title>
+</head>
+<body>
+  <div class="box1">
+  <div class="box">
+  <h1>Register form</h1>
+</div>
+<div class="myform">
+  <form id="myForm">
+    <label for="name"style="font-size:30px">Name:</label>
+    <input type="text" style="margin-left: 40px;width:250px;height:40px;"id="name" name="name" required><br><br>
+
+    <label for="email"style="font-size:30px">Email:</label>
+    <input type="email"style="margin-left:40px;width:250px;height:40px;" id="email" name="email" required><br><br>
+
+    <label for="password"style="font-size:30px">Password:</label>
+    <input type="password"style="width:250px;height:40px;" id="password" name="password" required><br><br>
+
+    <button type="submit">Submit</button>
+  </div>
+  </form>
+</div>
+
+  <script>
+    document.getElementById('myForm').addEventListener('submit', async function (event) {
+      event.preventDefault();
+
+      const formData = new FormData(this);
+      const formObject = {};
+      formData.forEach((value, key) => {
+        formObject[key] = value;
+      });
+
+      const response = await fetch('http://localhost:3000/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formObject),
+      });
+
+      if (response.ok) {
+        alert('Form submitted successfully!');
+      } else {
+        alert('Failed to submit form. Please try again later.');
+      }
+    });
+  </script>
+</body>
+</html>

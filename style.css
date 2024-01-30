@@ -1,0 +1,39 @@
+body{
+    background-image:url(https://images.inc.com/uploaded_files/image/1920x1080/getty_663974538_353364.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 800px;
+}.box{
+    text-align: center;
+    color:rgb(32, 3, 80);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.myform{
+    text-align: center;
+    
+}
+
+input{
+    border-radius: 10px;
+    border:3px solid rgb(52, 2, 96);
+    
+}
+.box1{
+    margin-top: 250px;
+    backdrop-filter: blur(50px);
+    border: 2px solid black;
+    width:700px;
+    margin-left: 400px;
+    height: 350px;
+    border-radius: 15px;;
+    
+}
+button{
+    background-color: rgb(52, 2, 96);
+    color: white;
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 100px;
+    width:100px;
+    height:40px;
+}
